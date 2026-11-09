@@ -1,0 +1,15 @@
+import java.io.BufferedReader; 
+import java.io.FileReader; 
+import java.io.IOException; 
+ 
+public class Q14 { 
+    public static void main(String[] args) { 
+ 
+        try (BufferedReader reader = new BufferedReader(new FileReader("data.txt"))) { 
+            String line = reader.readLine(); 
+            System.out.println("First line: " + line); 
+        } catch (IOException e) { 
+            System.out.println("File error: " + e.getMessage()); 
+        } 
+    } 
+} 
